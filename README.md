@@ -3,10 +3,11 @@
 This small framework help you to work with ejs or underscore templates. It let you easily structure your templete in a hierarchy. It enables to load subTemplates by providing a child templateManager to the used data-object. Now it can load templates from <template>-tags or via name throu ajax. 
 
 ## Usage
-You can check everything in detail in the source of indexHTML. and the Templates folder.
+You can check everything in detail in the source of index.html and the Templates folder.
+
 
 create an object of TemplateManager:
-load your templatingEngine and the TemplateManagerClass.js in your HTML
+load your templatingEngine and the TemplateManagerClass.js in your HTML and then
 
 var tM = new TemplateManager("EJS"); // you can also use "underscore"
 
