@@ -20,11 +20,12 @@ var tM = new TemplateManager("EJS"); // you can also use "underscore"
     
 ### methods
 usually you only need the render method.
-tM.render("sub/name",data);
+    tM.render("sub/name",data);
 this method will load the template and render them.
 
 If you initialise the tM before all HTML is interpreted including all the templates, you can run 
-tM.findTemplates(); by yourselfe. it will find and compile all templates in the HTML that have an id-Attribute.
+    tM.findTemplates(); 
+by yourselfe. it will find and compile all templates in the HTML that have an id-Attribute.
 
 the other methods compile and loadTemplateFileare, are used internally.
 
