@@ -38,5 +38,5 @@ the other methods compile and loadTemplateFileare, are used internally.
 ## Development
 This module is developed and maintained by Tobias Nickel, feel free to contact me here on Github.
 
-In near future I want to compile all Templates on the Server using NodeJS to provide all templates using a single http request. I will also make it possible to use this TemplateManager as Engine in Express.js, that will allow you to use the same engine in Client and Server. After that, I will check out to Support more Engines, like Mustach and jade. Very important is also the support for dependency management, so I want to support requireJS and google-closure.
+In near future I want to compile all Templates on the Server using NodeJS to provide all templates using a single http request. I will also make it possible to use this TemplateManager as Engine in Express.js, that will allow you to use the same engine in Client and Server. After that, I will check out to Support more Engines, like Mustach, haml, Hogan and jade. Very important is also the support for dependency management, so I want to support requireJS and google-closure.
 
