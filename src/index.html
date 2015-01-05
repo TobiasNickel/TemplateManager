@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>test</title>
+    <script src="ejs.js"></script>
+    <script src="TemplateManagerClass.js"></script>
+    <script>
+        var templateManager = new TemplateManager("EJS");
+        EJS.type = "[";
+        templateManager.basePath = "./templates";
+        templateManager.nameOfTemplatemanager = "tM";
+        var body;
+
+
+        window.addEventListener("load", function () {
+            templateManager.findTemplates();
+            body = document.getElementsByTagName("body")[0];
+            body.innerHTML = templateManager.render("test", {
+                "name": "Tobias",
+                "age": 26
+            });
+        });
+    </script>
+    <style>
+        template {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+</body>
+<template id="usernameAndAge">
+    <div>Hi [%= name %]</div>
+    <div>[%= age %]</div>
+</template>
+
+</html>
