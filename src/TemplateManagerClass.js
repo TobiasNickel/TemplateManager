@@ -7,7 +7,7 @@ var TemplateManager = (function () {
      *
      * @param enging {string} name if the template engine, "ejs", "underscore"
      */
-    function TemplateManager(engine, defaults, basePath, fileExtension, nameOfTemplatemanager, baseName) {
+    function TemplateManager(engine, defaults, basePath, fileExtension, nameOfTemplatemanager, baseName, templates) {
         if (engine instanceof TemplateManager) {
             var example = engine;
             engine = example.engine;
@@ -16,8 +16,9 @@ var TemplateManager = (function () {
             fileExtension = example.fileExtension;
             nameOfTemplatemanager = example.nameOfTemplatemanager;
             baseName = example.baseName;
+            templates = example.templates;
         }
-        this.templates = {};
+        this.templates = templates ? templates : {};
         this.engine = engine.toLowerCase().trim();
         this.defaults = defaults ? defaults : {};
         this.basePath = basePath ? basePath : "/templates";
@@ -61,7 +62,7 @@ var TemplateManager = (function () {
 
     TemplateManager.prototype.render = function (name, data) {
         var options = {};
-        options.that=options;
+        options.that = options;
         extend(options, data);
         //preparing next templateManager for the template
         var nextTM = new TemplateManager(this);
