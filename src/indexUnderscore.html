@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>test</title>
+    <script src="engines/underscore.js"></script>
+    <script src="TemplateManagerClass.js"></script>
+    <script>
+        var templateManager = new TemplateManager("UNDERSCORE");
+         // setting up the "[" and "]" as seperator
+        _.templateSettings = {
+            evaluate: /\[%([\s\S]+?)%\]/g,
+            interpolate: /\[%=([\s\S]+?)%\]/g,
+            escape: /\[%-([\s\S]+?)%\]/g
+        };
+        templateManager.fileExtension = 'ejs.html'
+        templateManager.basePath = "./templates";
+        templateManager.nameOfTemplatemanager = "tM";
+        var body;
+
+
+        window.addEventListener("load", function () {
+            templateManager.findTemplates();
+            body = document.getElementsByTagName("body")[0];
+            body.innerHTML = templateManager.render("ejs/test", {
+                "name": "Tobias",
+                "age": 26
+            });
+        });
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

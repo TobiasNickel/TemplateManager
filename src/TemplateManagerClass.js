@@ -34,13 +34,16 @@ var TemplateManager = (function () {
         case "underscore":
             this.compile = compileUnderscore;
             break;
+        case "mustache":
+            this.compile = compileMustache;
+            break;
         default:
             throw "no valid templateEngine defined";
         }
         this.findTemplates();
     }
     /**
-     * the compile method needs to take the text of the template and returns the rendering Method.for a template.
+     * the compile method needs to take the text of the template and returns the rendering Method for a template.
      *
      * the rendering method. takes data to display and returns a the result.
      */
@@ -50,9 +53,16 @@ var TemplateManager = (function () {
         });
         return function renderTemplate(data) {
             return template.render(data);
-        }
+        };
     }
-
+    
+    
+    function    compileMustache(templateText){
+        return function(data){
+            return Mustache.render(templateText,data);
+        };
+    }
+    
     function compileUnderscore(templateText) {
         return _.template(templateText);
     }

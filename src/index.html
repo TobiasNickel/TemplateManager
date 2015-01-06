@@ -5,37 +5,14 @@
     <title>test</title>
     <script src="engines/ejs.js"></script>
     <script src="TemplateManagerClass.js"></script>
-    <script>
-        //create a templateManager
-        var templateManager = new TemplateManager("EJS");
-        EJS.type = "[";
-        templateManager.basePath = "./templates";
-        templateManager.nameOfTemplatemanager = "tM";
-        var body;
-
-
-        window.addEventListener("load", function () {
-            templateManager.findTemplates();
-            body = document.getElementsByTagName("body")[0];
-            body.innerHTML = templateManager.render("test", {
-                "name": "Tobias",
-                "age": 26
-            });
-        });
-    </script>
-    <script src="templates.js"></script>
-    <style>
-        template {
-            display: none;
-        }
-    </style>
 </head>
 
 <body>
+    <h1>Templates</h1>
+    <a href="indexUnderscore.html">Underscore</a>
+    <a href="indexEJS.html">EJS</a>
+    <a href="indexMustache.html">Mustache</a>
+    
 </body>
-<template id="usernameAndAge">
-    <div>Hi [%= name %]</div>
-    <div>[%= age %]</div>
-</template>
 
 </html>
