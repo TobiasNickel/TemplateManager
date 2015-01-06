@@ -3,9 +3,10 @@
 
 <head>
     <title>test</title>
-    <script src="ejs.js"></script>
+    <script src="engines/ejs.js"></script>
     <script src="TemplateManagerClass.js"></script>
     <script>
+        //create a templateManager
         var templateManager = new TemplateManager("EJS");
         EJS.type = "[";
         templateManager.basePath = "./templates";
@@ -22,6 +23,7 @@
             });
         });
     </script>
+    <script src="templates.js"></script>
     <style>
         template {
             display: none;
