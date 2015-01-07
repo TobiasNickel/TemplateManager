@@ -37,6 +37,9 @@ var TemplateManager = (function () {
         case "mustache":
             this.compile = compileMustache;
             break;
+        case "jade":
+            this.compile = compileJade;
+            break;
         default:
             throw "no valid templateEngine defined";
         }
@@ -53,6 +56,12 @@ var TemplateManager = (function () {
         });
         return function renderTemplate(data) {
             return template.render(data);
+        };
+    }
+    function compileJade(templateText) {
+        var template = new jade.compile(templateText);
+        return function renderTemplate(data) {
+            return template(data);
         };
     }
     

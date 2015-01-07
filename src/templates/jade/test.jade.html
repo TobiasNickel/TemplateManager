@@ -1,0 +1,16 @@
+a(href='index.html') index
+div 
+    takes the two params age and name, the name is directly printed here: #{name}.
+div
+    This is a list of properties that all templateManager have. The sourcecode to create the List, demonstrates, that you can use pure Javascript inside the EJS templateengine.
+ul  
+    each element, i in tM
+        li #{i}:: #{element.toString().slice(0,20)}
+    
+div after that, a subtemplate is loaded and the input object is passed as data.
+div !{tM.render("subtemplates/hallo",that) }
+
+div in the end we display some data using a recursive template
+br
+
+div !{ tM.render('asList',{a:'albert',b:'bert',c:{d:"dave",e:{tobias:'nickel'}},f:'fanni'}) }

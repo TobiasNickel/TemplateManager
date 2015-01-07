@@ -1,0 +1,7 @@
+ul(style="margin-top:-16px;padding-top:0px;")
+    each element, i in that
+        if ['that','tM'].indexOf(i) === -1
+            if typeof that[i] == 'object'
+                li !{ tM.render('asList',that[i]) }
+            else
+                li !{ that[i] }

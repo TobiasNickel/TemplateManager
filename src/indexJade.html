@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>test</title>
+    <script src="engines/jade.js"></script>
+    <script src="TemplateManagerClass.js"></script>
+    <script>
+        //creating the templateManager for your engine
+        var templateManager = new TemplateManager("JADE");
+
+         //more settings
+        templateManager.fileExtension = 'jade.html'
+        templateManager.basePath = "./templates";
+        templateManager.nameOfTemplatemanager = "tM";
+
+        var body;
+        window.addEventListener("load", function () {
+            body = document.getElementsByTagName("body")[0];
+            body.innerHTML = templateManager.render("jade/test", {
+                "name": "Tobias",
+                "age": 26
+            });
+        });
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

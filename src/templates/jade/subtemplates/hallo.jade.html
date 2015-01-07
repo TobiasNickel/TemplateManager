@@ -1,0 +1,7 @@
+style .gray{width:300px;padding:6px;background-color:lightgray;margin:2px;}
+div.gray
+    h2 the hallo subTemplate
+    div we use age to show the age: #{ age }
+    div and load then two more template. First the secondLevel/Hallo and then the firstLebel test2.html by usind "../test2"
+    !{ tM.render("secondLevel/hallo") }
+    !{ tM.render("../test2") }
