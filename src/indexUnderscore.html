@@ -13,7 +13,7 @@
             interpolate: /\[%=([\s\S]+?)%\]/g,
             escape: /\[%-([\s\S]+?)%\]/g
         };
-        templateManager.fileExtension = 'ejs.html'
+        templateManager.fileExtension = '_.html'
         templateManager.basePath = "./templates";
         templateManager.nameOfTemplatemanager = "tM";
         var body;
@@ -22,12 +22,13 @@
         window.addEventListener("load", function () {
             templateManager.findTemplates();
             body = document.getElementsByTagName("body")[0];
-            body.innerHTML = templateManager.render("ejs/test", {
+            body.innerHTML = templateManager.render("underscore/test", {
                 "name": "Tobias",
                 "age": 26
             });
         });
     </script>
+    <script src="templates.js"></script>
 </head>
 
 <body>

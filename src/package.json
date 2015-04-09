@@ -1,0 +1,25 @@
+{
+  "name": "TemplateManager",
+  "version": "0.0.0",
+  "description": "Helping you to manager your templates in Javascript",
+  "main": "compileTemplates.js",
+  "scripts": {
+    "test": "node compileTemplates.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/TobiasNickel/TemplateManager"
+  },
+  "keywords": [
+    "Template",
+    "EJS",
+    "Jade",
+    "Compile",
+    "Precompile"
+  ],
+  "author": "Tobias Nickel",
+  "license": "MIT",
+  "dependencies": {
+    "underscore": "^1.8.3"
+  }
+}
