@@ -9,7 +9,7 @@ You can check everything in detail in the source of index.html and the Templates
 create an object of TemplateManager:
 load your templatingEngine and the TemplateManagerClass.js in your HTML and then
 
-var tM = new TemplateManager("EJS"); // you can also use "underscore"
+var tM = new TemplateManager("EJS"); // you can also use "underscore", "jade", "mustache"
 
 ### set the basic properties. 
     tM.defaults;    // basic object that will be passed to every template
@@ -34,9 +34,10 @@ by yourselfe. it will find and compile all templates in the HTML that have an id
 
 the other methods compile and loadTemplateFileare, are used internally.
 
+It is possible to compile the themplates in a folder to one file, that can be merged to your js. 
 
 ## Development
 This module is developed and maintained by Tobias Nickel, feel free to contact me here on Github.
 
-In near future I want to compile all Templates on the Server using NodeJS to provide all templates using a single http request. I will also make it possible to use this TemplateManager as Engine in Express.js, that will allow you to use the same engine in Client and Server. After that, I will check out to Support more Engines, like Mustach, haml, Hogan and jade. Very important is also the support for dependency management, so I want to support requireJS and google-closure.
+I will check out to Support more Engines, like  haml and Hogan. Very important is also the support for dependency management, so I want to support requireJS and google-closure.
 
