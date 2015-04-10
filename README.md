@@ -41,3 +41,7 @@ This module is developed and maintained by Tobias Nickel, feel free to contact m
 
 I will check out to Support more Engines, like  haml and Hogan. Very important is also the support for dependency management, so I want to support requireJS and google-closure.
 
+
+###Developer
+Tobias Nickel  
+![alt text](https://avatars1.githubusercontent.com/u/4189801?s=150) 
