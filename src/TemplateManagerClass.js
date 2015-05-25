@@ -54,26 +54,35 @@ var TemplateManager = (function () {
         var template = new EJS({
             text: templateText
         });
-        return function renderTemplate(data) {
+        return function renderEjsTemplate(data) {
             return template.render(data);
         };
     }
     function compileJade(templateText) {
-        var template = new jade.compile(templateText);
-        return function renderTemplate(data) {
-            return template(data);
-        };
+        var template = jade.compile(templateText);
+        //::test if the short version is working
+        // var template = new jade.compile(templateText);
+        // return function renderJadeTemplate(data) {
+        //     return template(data);
+        // };
     }
-    
-    
-    function    compileMustache(templateText){
+    function compileDoT(templateText) {
+        return doT.compile( templateText );
+        //::test if the short version is working
+        // var template = new doT.compile( templateText );
+        // return function renderDoTTemplate(data) {
+        //     return template(data);
+        // };
+    }
+    // underscore returnes a template, that is directlz usable
+    function compileUnderscore(templateText) {
+        return _.template(templateText);
+    }
+    // mustache has its own templateCache
+    function compileMustache(templateText){
         return function(data){
             return Mustache.render(templateText,data);
         };
-    }
-    
-    function compileUnderscore(templateText) {
-        return _.template(templateText);
     }
     /**
      * end compile Methods
