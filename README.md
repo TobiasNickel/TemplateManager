@@ -9,7 +9,7 @@ You can check everything in detail in the source of index.html and the Templates
 create an object of TemplateManager:
 load your templatingEngine and the TemplateManagerClass.js in your HTML and then
 
-var tM = new TemplateManager("EJS"); // you can also use "underscore", "jade", "mustache"
+var tM = new TemplateManager("EJS"); // you can also use "underscore", "jade", "mustache", "dot"
 
 ### set the basic properties. 
     tM.defaults;    // basic object that will be passed to every template
