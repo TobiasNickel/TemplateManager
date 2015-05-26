@@ -1,0 +1,13 @@
+<ul style="margin-top:-16px;padding-top:0px;">
+    {{ for(i in it.that){ }}
+        {{ if(['that','tM'].indexOf(i) == -1){ }}
+    <li style="margin-top:0px;padding-top:0px;"><b>{{= i }}</b>
+            {{ if(typeof it.that[i] == 'object'){ }}
+                {{= it.tM.render('asList',it.that[i]) }}
+            {{ }else{ }}
+                {{= it.that[i] }}
+            {{ } }}
+        </li>
+        {{ } }}
+    {{ } }} 
+</ul>

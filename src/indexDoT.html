@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>test</title>
+    <script src="engines/doT.js"></script>
+    <script src="TemplateManagerClass.js"></script>
+    <script>
+        //creating the templateManager for your engine
+        var templateManager = new TemplateManager("doT");
+         // setting up the "[" and "]" as seperator
+        
+         //more settings
+        templateManager.fileExtension = 'dot.html'
+        templateManager.basePath = "./templates";
+        templateManager.nameOfTemplatemanager = "tM";
+
+        var body;
+        window.addEventListener("load", function () {
+            body = document.getElementsByTagName("body")[0];
+            body.innerHTML = templateManager.render("doT/test", {
+                "name": "Tobias",
+                "age": 26
+            });
+        });
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
