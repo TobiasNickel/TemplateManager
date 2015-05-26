@@ -40,6 +40,9 @@ var TemplateManager = (function () {
         case "jade":
             this.compile = compileJade;
             break;
+        case "dot":
+            this.compile = compileDoT;
+            break;
         default:
             throw "no valid templateEngine defined";
         }
