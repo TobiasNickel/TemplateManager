@@ -1,6 +1,12 @@
 # TemplateManager
 
-This small framework help you to work with mustache, jade, ejs or underscore templates. It let you easily structure your templete in a hierarchy. It enables to load subTemplates by providing a child templateManager to the used data-object. Now it can load templates from <template>-tags or via name throu ajax. 
+This small framework help you to work with mustache, jade, ejs, doT or underscore templates. It let you easily structure your templete in a hierarchy. It enables to load subTemplates by providing a child templateManager to the used data-object. Now it can load templates from <template>-tags or via name throu ajax. 
+
+## Features
+-loading templates dynamicly from the server during development
+-merge templates for Production to JS
+-load your templates hirarchic from your filesystem
+-build recursive templates
 
 ## Usage
 You can check everything in detail in the source of index.html and the Templates folder.
